@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>Epona - Multipurpose Template</title>
+		<meta name="keywords" content="HTML5,CSS3,Template" />
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/images/demo/favicon.ico" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/sky-forms.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/weather-icons.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/line-icons.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/owl-carousel/owl.pack.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/animate.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/flexslider.css" rel="stylesheet" type="text/css" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="assets/css/revolution-slider.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layerslider.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/header-default.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/footer-default.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+		<!-- Morenizr -->
+		<script type="text/javascript" src="assets/plugins/modernizr.min.js"></script>
+
+		<!--[if lte IE 8]>
+			<script src="assets/plugins/respond.js"></script>
+		<![endif]-->
+	</head>
+	
+	<!-- 
+		Available body classes: 
+			smoothscroll			= enable chrome browser smooth scroll
+			grey 					= grey content background
+			boxed 					= boxed style
+			pattern1 ... pattern10 	= background pattern
+
+		Background Image - add to body: 
+			data-background="assets/images/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll">
+
+		<div id="wrapper">
+
+			<div id="header"><!-- class="sticky" for sticky menu -->
+
+				<!-- Top Bar -->
+				<header id="topBar">
+
+						
+							  
+
+					<div class="container">
+
+						<div class="pull-right fsize13 margin-top10 hide_mobile">
+
+							<!-- mail , phone -->
+							<div class="fa-hover col-sm-5 "><span><a href="mailto:support@ecutuningservice.com">support@ecutuningservice.com</a></span></div>
+							<div class="fa-hover col-sm-4 "><i class="fa fa-phone-square"></i> <span>0541 761 61 31</span></div>
+							<div class="fa-hover col-sm-4"><i class="fa fa-phone-square"></i> <span>0262 332 26 61</span></div>
+
+
+							<div class="block text-right"><!-- social -->
+								<a href="https://fb.com/mgremaps" class="social fa fa-facebook"></a>
+								<a href="https://www.instagram.com/mgremaps_official" class="social fa fa-instagram"></a>
+								<a href="https://www.youtube.com/channel/UCA357awNI2xjO3A5jXaLrNQ" class="social fa fa-youtube"></a>
+							</div><!-- /social -->
+
+							<div class="fa-hover col-sm-4"><a href="page-login.html"><i class="fa fa fa-sign-in"></i> <span>Uye Girisi/Kayit</span></a></div>
+							<div class="fa-hover col-sm-3"><a href="logout"><i class="fa fa fa-sign-out"></i> <span>Cikis</span></a></div>
+						</div>
+
+						<!-- Logo -->
+						
+						<a class="logo" href="index.html">
+							<img  class="appear-animation" src="assets/images/logo.png" height="50" alt="" data-animation="bounceInRight"/>
+						</a>
+
+					</div><!-- /.container -->
+				</header>
+				<!-- /Top Bar -->
+
+
+				<!-- Top Nav -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Search 
+						<form class="search" method="get" action="page-search.html">
+							<input type="text" class="form-control" name="s" value="" placeholder="Search">
+							<button class="fa fa-search"></button>
+						</form>
+						 /Search -->
+
+						<!-- Top Nav -->
+						<div class="navbar-collapse nav-main-collapse collapse">
+							<nav class="nav-main">
+
+								<!--
+									NOTE
+									
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
+									</li>
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main">
+									<li>
+												<a href="index.html">	Ana Sayfa <span>MG Remaps</span> </a>
+									</li>
+									<li>
+											<a href="page-about-us.html">	Kurumsal </a>
+									</li>
+									<li class="dropdown mega-menu">
+										<a class="dropdown-toggle" href="#">Bayilerimiz </a>
+										<ul class="dropdown-menu">
+											<li>
+												<div class="row">
+													<div class="col-md-3">
+														<h3>Yurt ici</h3>
+														<ul>
+															<li><a href="page-about-basic.html"><i class="fa fa-angle-right"></i> Ankara </a></li>
+															<li><a href="page-about-us.html"><i class="fa fa-angle-right"></i> Bilecik </a></li>
+															<li><a href="page-about-me.html"><i class="fa fa-angle-right"></i> Bursa </a></li>
+															<li><a href="page-about-team.html"><i class="fa fa-angle-right"></i> Corum</a></li>
+															<li><a href="page-services.html"><i class="fa fa-angle-right"></i> Denizli</a></li>
+															<li><a href="page-careers.html"><i class="fa fa-angle-right"></i> Istanbul </a></li>
+															<li><a href="page-gallery.html"><i class="fa fa-angle-right"></i> Izmir</a></li>
+															<li><a href="page-article.html"><i class="fa fa-angle-right"></i> Kocaeli</a></li>
+															<li><a href="page-article.html"><i class="fa fa-angle-right"></i> Ordu (Fatsa)</a></li>
+															<li><a href="page-article.html"><i class="fa fa-angle-right"></i> Sakarya</a></li>
+															<li><a href="page-article.html"><i class="fa fa-angle-right"></i> Tokat</a></li>
+														</ul>
+													</div>
+													<div class="col-md-3">
+														<h3>Yurt Disi</h3>
+														<ul>
+															<li><a href="page-timeline-centered.html"><i class="fa fa-angle-right"></i> Almanya</a></li>
+															
+														</ul>
+													</div>
+													<div class="col-md-6">
+														<h3>Bayilik Hakkinda</h3>
+														<ul>
+															<li><a href="page-pricing-standard.html"><i class="fa fa-angle-right"></i> Zaman Cizelgesi </a></li>
+															<li><a href="page-pricing-standard.html"><i class="fa fa-angle-right"></i> Bayilik Basvuru Formu </a></li>
+														</ul>
+													</div>
+													
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li>
+											<a href="index.html">	Araclarimiz <span>Uygulamalar</span> </a>
+									</li>
+									<li class="dropdown">
+											<a class="dropdown-toggle" href="#">Hizmetlerimiz </a>
+											<ul class="dropdown-menu">
+												<li><a href="portfolio-2-columns.html">Chip Tuning</a></li>
+												<li><a href="portfolio-3-columns.html">DSG Tuning</a></li>
+												<li class="divider"></li>
+												<li><a href="portfolio-single-basic.html">Gizli Özellikler</a></li>
+												<li><a href="portfolio-single-basic.html">Guc Artisi Hesaplama</a></li>
+											</ul>
+										</li>
+									
+									<li>
+											<a href="index.html">	Duyurular  <span>Son Haberler</span> </a>
+										</li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" href="#">Iletisim <span>Bize Yazin</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="contact-1.html">Adres</a></li>
+											<li><a href="contact-2.html">Bize Yazin</a></li>
+											<li><a href="contact-3.html">Ziyaretci Defteri</a></li>
+										</ul>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+						<!-- /Top Nav -->
+
+			</div>
+
+
+			<!-- PAGE TOP -->
+			<section class="page-title">
+				<div class="container">
+
+					<header>
+
+						<ul class="breadcrumb"><!-- breadcrumb -->
+							<li><a href="#">Sayfalar</a></li>
+							<li class="active">Uyelik Sayfasi</li>
+						</ul><!-- /breadcrumb -->
+
+						<h2><!-- Page Title -->
+							Uyelik
+						</h2><!-- /Page Title -->
+
+					</header>
+
+				</div>			
+			</section>
+			<!-- /PAGE TOP -->
+
+
+
+			<!-- CONTENT -->
+			<section>
+				<div class="container">
+
+					<div class="row">
+					
+						<!-- LOGIN -->
+						</div>
+						<!-- LOGIN -->
+						<div class="col-md-6 col-sm-6">
+
+							<!-- login form -->
+							<form th:action="@{/login}" th:object="${registeruser}" method="post" class="sky-form boxed">
+								<header>Uye Girisi</header>
+								<fieldset>
+									<section>
+										<label class="input">
+											<i class="icon-append fa fa-envelope"></i>
+											<input required type="email" placeholder="Email adresi" th:field="*{email}">
+											<b class="tooltip tooltip-bottom-right">Hesabi dogulamaniz gerekli</b>
+										</label>
+									</section>
+									
+									<section>
+										<label class="input">
+											<i class="icon-append fa fa-lock"></i>
+											<input required type="password" placeholder="Sifre" th:field="*{password}">
+											<b class="tooltip tooltip-bottom-right">Sadece karakter ve sayi</b>
+										</label>
+										<div class="note"><a href="#">Sifremi unuttum?</a></div>
+									</section>
+									
+									<section>
+										<label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>Beni Hatirla</label>
+									</section>
+
+								</fieldset>
+								<footer>
+									<button type="submit" class="button">Giris</button>
+								</footer>
+							</form>
+							<!-- /login form -->
+
+						</div>
+						<!-- /LOGIN -->
+						
+
+
+
+
+						<!-- REGISTER -->
+						<div class="col-md-6 col-sm-6">
+
+							<!-- registration form -->
+							<form action="/register" method="post" th:object="${registeruser}" class="sky-form boxed">
+								<header>Yeni Kayit</header>
+								
+								<fieldset>								
+									<section>
+										<label class="input">
+											<i class="icon-append fa fa-envelope"></i>
+											<input required type="email" placeholder="Email adresi" th:field="*{email}">
+										</label>
+									</section>
+									
+									<section>
+										<label class="input">
+											<i class="icon-append fa fa-lock"></i>
+											<input required type="password" placeholder="Sifre" th:field="*{password}">
+										</label>
+									</section>
+								</fieldset>
+								<fieldset>
+									<div class="row">
+										<section class="col col-md-12">
+											<label class="input">
+												<input required type="text" placeholder="Adi" th:field="*{name}">
+											</label>
+										</section>
+									</div>
+								</fieldset>	
+								<fieldset>
+										<section>
+												<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Haber ve firsatlari mail olarak almak istyorum</label>
+											</section>
+								</fieldset>
+								<footer>
+									<button type="submit" class="button">Kayit Ol</button>
+								</footer>
+							</form>
+							<!-- /registration form -->
+
+						</div>
+						<!-- /REGISTER -->
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /CONTENT -->
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+
+						<!-- col #1 -->
+						<div class="logo_footer dark col-md-3">
+
+							<img alt="" src="assets/images/logo_footer.png" height="50" class="logo" />
+
+							<p class="block">
+								4th Street, Suite 88<br />
+								New York NY 10887<br />
+								Email: youremail@yourdomain.com<br />
+								Phone: +40 (0) 111 1234 567<br />
+								Fax: +40 (0) 111 1234 568<br />
+							</p>
+
+							<p class="block"><!-- social -->
+								<a href="#" class="social fa fa-facebook"></a>
+								<a href="#" class="social fa fa-twitter"></a>
+								<a href="#" class="social fa fa-google-plus"></a>
+								<a href="#" class="social fa fa-linkedin"></a>
+							</p><!-- /social -->
+						</div>
+						<!-- /col #1 -->
+
+						<!-- col #2 -->
+						<div class="spaced col-md-3 col-sm-4">
+							<h4>Recent <strong>Posts</strong></h4>
+							<ul class="list-unstyled">
+								<li>
+									<a class="block" href="#">New CSS3 Transitions this Year</a>
+									<small>June 29, 2014</small>
+								</li>
+								<li>
+									<a class="block" href="#">Inteligent Transitions In UX Design</a>
+									<small>June 29, 2014</small>
+								</li>
+								<li>
+									<a class="block" href="#">Lorem Ipsum Dolor</a>
+									<small>June 29, 2014</small>
+								</li>
+							</ul>
+						</div>
+						<!-- /col #2 -->
+
+						<!-- col #3 -->
+						<div class="spaced col-md-3 col-sm-4">
+							<h4>Recent <strong>Tweets</strong></h4>
+							<ul class="list-unstyled fsize13">
+								<li>
+									<i class="fa fa-twitter"></i> <a href="#">@John Doe</a> Pilsum dolor lorem sit consectetur adipiscing orem sequat <small class="ago">8 mins ago</small>
+								</li>
+								<li>
+									<i class="fa fa-twitter"></i> <a href="#">@John Doe</a> Remonde sequat ipsum dolor lorem sit consectetur adipiscing  <small class="ago">8 mins ago</small>
+								</li>
+								<li>
+									<i class="fa fa-twitter"></i> <a href="#">@John Doe</a> Imperdiet condimentum diam dolor lorem sit consectetur adipiscing <small class="ago">8 mins ago</small>
+								</li>
+							</ul>
+						</div>
+						<!-- /col #3 -->
+
+						<!-- col #4 -->
+						<div class="spaced col-md-3 col-sm-4">
+							<h4>About <strong>Us</strong></h4>
+							<p>
+								Incredibly beautiful responsive Bootstrap Template for Corporate and Creative Professionals.
+							</p>
+
+							<h4><small><strong>Subscribe to our Newsletter</strong></small></h4>
+							<form id="newsletterSubscribe" method="post" action="php/newsletter.php" class="input-group">
+								<input required type="email" class="form-control" name="newsletter_email" id="newsletter_email" value="" placeholder="E-mail Address">
+								<span class="input-group-btn">
+									<button class="btn btn-primary">SUBMIT</button>
+								</span>
+							</form>
+
+						</div>
+						<!-- /col #4 -->
+
+					</div>
+
+				</div>
+
+				<hr />
+
+				<div class="copyright">
+					<div class="container text-center fsize12">
+						Epona theme by <a href="http://www.stepofweb.com" target="_blank" title="bootstrap themes &amp; templates" class="copyright">stepofweb</a> &bull; All Right Reserved &copy; Your Company LLC. &nbsp;
+						<a href="page-privacy.html" class="fsize11">Privacy Policy</a> &bull; 
+						<a href="page-terms.html" class="fsize11">Terms of Service</a>
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+
+			<a href="#" id="toTop"></a>
+
+		</div><!-- /#wrapper -->
+
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript" src="assets/plugins/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery.isotope.js"></script>
+		<script type="text/javascript" src="assets/plugins/masonry.js"></script>
+
+		<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/knob/js/jquery.knob.js"></script>
+		<script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+
+		<!-- REVOLUTION SLIDER -->
+		<script type="text/javascript" src="assets/plugins/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="assets/js/revolution_slider.js"></script>
+
+		<script type="text/javascript" src="assets/js/scripts.js"></script>
+		<script type="text/javascript" src="assets/plugins/styleswitcher/styleswitcher.js">/** REMOVE ON PRODUCTION **/</script>
+	</body>
+</html>
