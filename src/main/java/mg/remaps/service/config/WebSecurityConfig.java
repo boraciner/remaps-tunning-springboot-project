@@ -25,12 +25,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
         
     	
     	 http
+    	 .csrf().disable()
          .authorizeRequests()
 	        .antMatchers(resources).permitAll()  
 	        .antMatchers("/","/index").permitAll()
 	        .antMatchers("/login").permitAll()
+	        .antMatchers("/page-register").permitAll()
 	        .antMatchers("/page-login").permitAll()
-	        .antMatchers("/contact-1*").access("hasRole('ADMIN')")
+	        .antMatchers("/page-pricing-standard").access("hasRole('USER') or hasRole('ADMIN')")
+	        .antMatchers("/contact-1").access("hasRole('ADMIN')")
+	        .antMatchers("/contact-2").access("hasRole('USER') or hasRole('ADMIN')")
 	        .antMatchers("/user*").access("hasRole('USER') or hasRole('ADMIN')")
              .anyRequest().authenticated()
              .and()
@@ -42,10 +46,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
              .usernameParameter("username")
              .passwordParameter("password")
              .and()
-         .logout()
-             .permitAll()
-             .logoutSuccessUrl("/login?logout");
+         .logout();
+             
     }
+    
+    
     BCryptPasswordEncoder bCryptPasswordEncoder;
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {

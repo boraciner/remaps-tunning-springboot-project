@@ -2,7 +2,7 @@
 <!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
 <!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" ang="en" >
 	<head>
 		<meta charset="utf-8" />
 		<title>Epona - Multipurpose Template</title>
@@ -94,7 +94,7 @@
 
 						<!-- Logo -->
 						
-						<a class="logo" href="index.html">
+						<a class="logo" href="/">
 							<img  class="appear-animation" src="assets/images/logo.png" height="50" alt="" data-animation="bounceInRight"/>
 						</a>
 
@@ -135,7 +135,7 @@
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main">
 									<li>
-												<a href="index.html">	Ana Sayfa <span>MG Remaps</span> </a>
+												<a href="/">	Ana Sayfa <span>MG Remaps</span> </a>
 									</li>
 									<li>
 											<a href="page-about-us.html">	Kurumsal </a>
@@ -181,7 +181,7 @@
 										</ul>
 									</li>
 									<li>
-											<a href="index.html">	Araclarimiz <span>Uygulamalar</span> </a>
+											<a href="cars">	Araclarimiz <span>Uygulamalar</span> </a>
 									</li>
 									<li class="dropdown">
 											<a class="dropdown-toggle" href="#">Hizmetlerimiz </a>
@@ -244,18 +244,17 @@
 					<div class="row">
 					
 						<!-- LOGIN -->
-						</div>
-						<!-- LOGIN -->
 						<div class="col-md-6 col-sm-6">
-
 							<!-- login form -->
-							<form th:action="@{/login}" th:object="${registeruser}" method="post" class="sky-form boxed">
-								<header>Uye Girisi</header>
+							<form th:action="@{/page-register}" method="post" th:object="${user}" class="sky-form boxed">
+								<header>Kayit</header>
+								
 								<fieldset>
+
 									<section>
 										<label class="input">
 											<i class="icon-append fa fa-envelope"></i>
-											<input required type="email" placeholder="Email adresi" th:field="*{email}">
+											<input required type="text" placeholder="Email adresi"  th:field="*{username}">
 											<b class="tooltip tooltip-bottom-right">Hesabi dogulamaniz gerekli</b>
 										</label>
 									</section>
@@ -263,19 +262,13 @@
 									<section>
 										<label class="input">
 											<i class="icon-append fa fa-lock"></i>
-											<input required type="password" placeholder="Sifre" th:field="*{password}">
+											<input required type="password" placeholder="Sifre"  th:field="*{password}">
 											<b class="tooltip tooltip-bottom-right">Sadece karakter ve sayi</b>
 										</label>
-										<div class="note"><a href="#">Sifremi unuttum?</a></div>
 									</section>
-									
-									<section>
-										<label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>Beni Hatirla</label>
-									</section>
-
 								</fieldset>
 								<footer>
-									<button type="submit" class="button">Giris</button>
+									<button type="submit" class="button">Kayit</button>
 								</footer>
 							</form>
 							<!-- /login form -->
@@ -287,51 +280,6 @@
 
 
 
-						<!-- REGISTER -->
-						<div class="col-md-6 col-sm-6">
-
-							<!-- registration form -->
-							<form action="/register" method="post" th:object="${registeruser}" class="sky-form boxed">
-								<header>Yeni Kayit</header>
-								
-								<fieldset>								
-									<section>
-										<label class="input">
-											<i class="icon-append fa fa-envelope"></i>
-											<input required type="email" placeholder="Email adresi" th:field="*{email}">
-										</label>
-									</section>
-									
-									<section>
-										<label class="input">
-											<i class="icon-append fa fa-lock"></i>
-											<input required type="password" placeholder="Sifre" th:field="*{password}">
-										</label>
-									</section>
-								</fieldset>
-								<fieldset>
-									<div class="row">
-										<section class="col col-md-12">
-											<label class="input">
-												<input required type="text" placeholder="Adi" th:field="*{name}">
-											</label>
-										</section>
-									</div>
-								</fieldset>	
-								<fieldset>
-										<section>
-												<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Haber ve firsatlari mail olarak almak istyorum</label>
-											</section>
-								</fieldset>
-								<footer>
-									<button type="submit" class="button">Kayit Ol</button>
-								</footer>
-							</form>
-							<!-- /registration form -->
-
-						</div>
-						<!-- /REGISTER -->
-
 					</div>
 
 				</div>
@@ -342,6 +290,7 @@
 
 			<!-- FOOTER -->
 			<footer id="footer">
+				<hr>
 				<div class="container">
 
 					<div class="row">

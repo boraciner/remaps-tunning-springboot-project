@@ -22,6 +22,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     UserRepository userRepository;
 	
+    
+    
     @Override
      public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
@@ -38,4 +40,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     UserDetails user = (UserDetails) new User(appUser.getUsername(), appUser.getPassword(), grantList);
          return user;
     }
+    
+    
+    
+    
 }

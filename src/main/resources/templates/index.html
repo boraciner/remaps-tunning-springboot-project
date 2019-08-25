@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8" />
-		<title>Epona - Multipurpose Template</title>
+		<title>MG Remaps | Chip Tuning</title>
 		<meta name="keywords" content="HTML5,CSS3,Template" />
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
@@ -94,14 +94,25 @@
 								<a href="https://www.instagram.com/mgremaps_official" class="social fa fa-instagram"></a>
 								<a href="https://www.youtube.com/channel/UCA357awNI2xjO3A5jXaLrNQ" class="social fa fa-youtube"></a>
 							</div><!-- /social -->
-
-							<div class="fa-hover col-sm-4"><a href="page-login"><i class="fa fa fa-sign-in"></i> <span>Uye Girisi/Kayit</span></a></div>
-							<div class="fa-hover col-sm-3"><a href="logout"><i class="fa fa fa-sign-out"></i> <span>Cikis</span></a></div>
+							
+							<th:block th:if="${username} == 'anonymousUser'">
+								<div class="fa-hover col-sm-4"><a href="page-login"><i class="fa fa fa-sign-in"></i> <span>Uye Girisi</span></a></div>
+								<div class="fa-hover col-sm-4"><a href="page-register"><i class="fa fa fa-sign-in"></i> <span>Kayit</span></a></div>
+							</th:block>
+							<th:block th:unless="${username} == 'anonymousUser'">
+								<div class="fa-hover col-sm-3">Hosgeldin <span th:text="${username}"/></div>
+    							<div class="fa-hover col-sm-3"><a href="logout"><i class="fa fa fa-sign-out"></i> <span>Cikis</span></a></div>
+    						</span>
+							
+							
+							
+							
+							
 						</div>
 
 						<!-- Logo -->
 						
-						<a class="logo" href="index">
+						<a class="logo" href="/">
 							<img  class="appear-animation" src="assets/images/logo.png" height="50" alt="" data-animation="bounceInRight"/>
 						</a>
 
@@ -142,13 +153,13 @@
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main">
 									<li>
-												<a href="index">	Ana Sayfa <span>MG Remaps</span> </a>
+												<a href="/">	Ana Sayfa <span>MG Remaps</span> </a>
 									</li>
 									<li>
 											<a href="page-about-us">	Kurumsal </a>
 									</li>
 									<li class="dropdown mega-menu">
-										<a class="dropdown-toggle" href="#">Bayilerimiz </a>
+										<a href="cars">	Bayilerimiz <span>Yurtici/Yurtdisi</span> </a>
 										<ul class="dropdown-menu">
 											<li>
 												<div class="row">
@@ -188,7 +199,7 @@
 										</ul>
 									</li>
 									<li>
-											<a href="index">	Araclarimiz <span>Uygulamalar</span> </a>
+											<a href="cars">	Araclarimiz <span>Uygulamalar</span> </a>
 									</li>
 									<li class="dropdown">
 											<a class="dropdown-toggle" href="#">Hizmetlerimiz </a>
@@ -202,7 +213,7 @@
 										</li>
 									
 									<li>
-											<a href="index">	Duyurular  <span>Son Haberler</span> </a>
+											<a href="anouncement">	Duyurular  <span>Son Haberler</span> </a>
 										</li>
 									<li class="dropdown">
 										<a class="dropdown-toggle" href="#">Iletisim <span>Bize Yazin</span></a>

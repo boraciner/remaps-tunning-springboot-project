@@ -1,6 +1,8 @@
 package mg.remaps.service.entity;
 
 import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+
 
 
 @Entity
@@ -28,7 +31,7 @@ public class User {
 	@Column
 	private boolean enabled;
 
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.EAGER , cascade = CascadeType.ALL)
 	@JoinTable(name = "authorities_users", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "authority_id"))
 	private Set<Authority> authority;
 
@@ -72,6 +75,16 @@ public class User {
 		this.authority = authority;
 	}
 
+	
+	
+	
+	public User(String username, String password, boolean enabled, Set<Authority> authority) {
+		this.username = username;
+		this.password = password;
+		this.enabled = enabled;
+		this.authority = authority;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -101,4 +114,11 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
 	}
+
+	public User() {
+	}
+	
+	
+	
+	
 }
