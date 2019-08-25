@@ -15,6 +15,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -47,7 +48,7 @@ public class AppController {
 
 	//$2a$04$NSbpKI/QYQ/5l4tf/lg8yeVaHs8.N0Q9njOpACLuyuTv.jPYiVaSe
 	@PostMapping("/page-register")
-	public String processForm(@ModelAttribute(value="user") User user,  HttpServletRequest request, HttpServletResponse response) {
+	public String processForm(@ModelAttribute(value="user") User user, ModelMap model, HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("gelen deger : " + user.getPassword());
 		System.out.println("gelen deger : " + user.getUsername());
 		
@@ -60,7 +61,15 @@ public class AppController {
 			user.setEnabled(true);
 			user.setAuthority(new HashSet<Authority>(Arrays.asList(auth)));
 			userRepository.save(new User(user.getUsername(), user.getPassword(), true, new HashSet<Authority>(Arrays.asList(auth))));
+
+
 			
+			UserDetails registeredUser = userService.loadUserByUsername(user.getUsername());
+	        Authentication authority = new UsernamePasswordAuthenticationToken(registeredUser, null, registeredUser.getAuthorities());
+	        SecurityContextHolder.getContext().setAuthentication(authority);
+	        model.addAttribute("username", user.getUsername());
+	        
+	        
 		}
 		
 		
