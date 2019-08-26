@@ -245,77 +245,31 @@
 					
 						<div class="col-md-6 col-sm-6">
 							<!-- login form -->
-							<form th:action="@{/page_register_select_brand}" method="post" th:object="${mguserdetails}" class="sky-form boxed">
-								<header>Kayit</header>
-								
-								<fieldset>
-
-									<section>
-										<label class="input">
-											<i class="icon-append fa fa-envelope"></i>
-											<input required type="text" placeholder="Email adresi"  th:field="*{username}">
-											<b class="tooltip tooltip-bottom-right">Hesabi dogulamaniz gerekli</b>
-										</label>
-									</section>
-									
-									<section>
-										<label class="input">
-											<i class="icon-append fa fa-lock"></i>
-											<input required type="password" placeholder="Sifre"  th:field="*{password}">
-											<b class="tooltip tooltip-bottom-right">Sadece karakter ve sayi</b>
-										</label>
-									</section>
-								</fieldset>
-								
-								<fieldset>
-									<div class="row">
-										<section class="col col-md-6">
-											<label class="input">
-												<input required type="text" placeholder="Adi" th:field="*{firstName}"> 
-											</label>
-										</section>
-										<section class="col col-md-6">
-											<label class="input">
-												<input required type="text" placeholder="Soyadi" th:field="*{lastName}">
-											</label>
-										</section>
-										
-									</div>
-										<div class="row">
-											<section class="col col-md-6">	
-													<label class="input">
-															<input required type="text" placeholder="Plaka" th:field="*{carPlateNumber}">
-														</label>
-											</section>
-											<section class="col col-md-6">	
-													<label class="input">
-															<input required type="text" placeholder="Sasi" th:field="*{chasisNumber}">
-														</label>
-											</section>		
-										</div>
-								</fieldset>	
+							<form th:action="@{/page_register_select_engine}" method="post" th:object="${mguserdetails}" class="sky-form boxed">
+								<header>Yil Secimi</header>
+								<input type="hidden" th:field="*{username}" />
+								<input type="hidden" th:field="*{password}">
+								<input type="hidden" th:field="*{firstName}">
+								<input type="hidden" th:field="*{lastName}">
+								<input type="hidden" th:field="*{carPlateNumber}">
+								<input type="hidden" th:field="*{chasisNumber}">
+								<input type="hidden" th:field="*{phoneNumber}">
+								<input type="hidden" th:field="*{password}">
+								<input type="hidden" th:field="*{carBrand}">
+								<input type="hidden" th:field="*{carModel}">
 								<fieldset>	
 										<div class="row">
 											<section class="col col-md-12">	
-													<label class="input">
-															<input required type="text" placeholder="Telefon Numarasi" th:field="*{phoneNumber}">
-														</label>
-											</section>
-										</div>
-								</fieldset>	
-								<!-- fieldset>	
-										<div class="row">
-											<section class="col col-md-12">	
-								<select class="form-control" th:field="*{carDetails}"  id="dropOperator">
-   								 	<option value="0">Marka Secimi</option>
-    								<option th:each="brand : ${brands}" th:value="${brand.id}" th:text="${brand.var_title}"></option>
+								<select class="form-control" th:field="*{carYear}"  id="dropOperator">
+   								 	<option value="0">Yil</option>
+    								<option th:each="year : ${years}" th:value="${year.id}" th:text="${year.var_title}"></option>
     							</select>
 								</section>
 										</div>
-								</fieldset-->	
+								</fieldset>	
 								
 								<footer>
-									<button type="submit" class="button">Arac Secimine Ilerle</button>
+									<button type="submit" class="button">Motor Secimine Ilerle</button>
 								</footer>
 							</form>
 							<!-- /login form -->
