@@ -35,6 +35,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	        .antMatchers("/page_register_select_model").permitAll()
 	        .antMatchers("/page_register_select_year").permitAll()
 	        .antMatchers("/page_register_select_engine").permitAll()
+	        .antMatchers("/page-about-us").permitAll()
 	        .antMatchers("/page-login").permitAll()
 	        .antMatchers("/page-pricing-standard").access("hasRole('USER') or hasRole('ADMIN')")
 	        .antMatchers("/contact-1").access("hasRole('ADMIN')")

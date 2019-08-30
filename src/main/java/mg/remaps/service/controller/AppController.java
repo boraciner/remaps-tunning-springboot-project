@@ -187,4 +187,22 @@ public class AppController {
 		return "index";
 	}
 
+	
+	
+	
+	
+	@GetMapping("/page-about-us")
+	public String showAboutUsPage(ModelMap model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (auth != null) {
+			String name = auth.getName();
+			model.addAttribute("username", name);
+		}
+
+		User user = new User();
+		model.addAttribute("user", user);
+
+		return "page-about-us";
+	}
+	
 }

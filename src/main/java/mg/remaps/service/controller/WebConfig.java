@@ -18,6 +18,7 @@ public class WebConfig implements WebMvcConfigurer {
 		registry.addViewController("/contact-1");
 		registry.addViewController("/contact-2");
 		registry.addViewController("/page-pricing-standard");
+		registry.addViewController("/page-about-us");
 	}
 	
 	 
