@@ -11,6 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("index");
+		registry.addViewController("/tumbayiler").setViewName("page-timeline-centered.html");
 		registry.addViewController("/login");
 		registry.addViewController("/contact-1");
 		registry.addViewController("/contact-2");
@@ -19,6 +20,18 @@ public class WebConfig implements WebMvcConfigurer {
 		registry.addViewController("/contact-2");
 		registry.addViewController("/page-pricing-standard");
 		registry.addViewController("/page-about-us");
+		
+		
+		
+		
+		
+		registry.addViewController("/cars").setViewName("page-coming-soon.html");
+		registry.addViewController("/anouncement").setViewName("page-coming-soon.html");
+		registry.addViewController("/chiptunning").setViewName("page-coming-soon.html");
+		registry.addViewController("/dsgtunning").setViewName("page-coming-soon.html");
+		registry.addViewController("/gizliozellikler").setViewName("page-coming-soon.html");
+		registry.addViewController("/gucartisihesaplama").setViewName("page-coming-soon.html");
+		
 	}
 	
 	 

@@ -188,7 +188,20 @@ public class AppController {
 	}
 
 	
-	
+	@GetMapping("/contact-1")
+	public String showContact(ModelMap model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (auth != null) {
+			String name = auth.getName();
+			model.addAttribute("username", name);
+		}
+
+		User user = new User();
+		model.addAttribute("user", user);
+
+		return "contact-1";
+	}
+
 	
 	
 	@GetMapping("/page-about-us")
@@ -204,5 +217,21 @@ public class AppController {
 
 		return "page-about-us";
 	}
+	
+	@GetMapping("/tumbayiler")
+	public String showbayiler(ModelMap model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (auth != null) {
+			String name = auth.getName();
+			model.addAttribute("username", name);
+		}
+
+		User user = new User();
+		model.addAttribute("user", user);
+
+		return "page-timeline-centered";
+	}
+	
+	
 	
 }
